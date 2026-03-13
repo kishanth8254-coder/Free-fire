@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK LTZ | Guild Boost</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-black text-white font-['Inter']">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-black tracking-tighter neon-text-purple">BLACK LTZ</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Home</a>
+                        <a href="/topup.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Top-Up</a>
+                        <a href="/boost.html" class="px-3 py-2 rounded-md text-sm font-medium text-brand-cyan transition-colors">Guild Boost</a>
+                        <a href="/panel.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Panel Store</a>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="px-4 py-2 rounded-full text-sm font-bold btn-glow-purple text-white">WhatsApp Order</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+            <div class="flex flex-col pt-10">
+                <a href="/" class="mobile-menu-link text-white">Home</a>
+                <a href="/topup.html" class="mobile-menu-link text-white">Top-Up</a>
+                <a href="/boost.html" class="mobile-menu-link text-brand-cyan">Guild Boost</a>
+                <a href="/panel.html" class="mobile-menu-link text-white">Panel Store</a>
+                <div class="p-8">
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="block w-full text-center py-4 rounded-full text-lg font-bold btn-glow-purple text-white">WhatsApp Order</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40 hero-gradient">
+        <div class="glow-circle w-96 h-96 bg-orange-600/20 top-0 -left-20"></div>
+        <div class="glow-circle w-96 h-96 bg-yellow-600/10 bottom-0 -right-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
+                <span class="block text-white">GUILD BOOST</span>
+                <span class="block neon-text-cyan">SERVICE</span>
+            </h1>
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <div class="glass-card px-6 py-3 rounded-full border-cyan-500/30">
+                    <span class="text-cyan-400 font-black">135,500</span> Glory in 1.5 Hours
+                </div>
+                <div class="glass-card px-6 py-3 rounded-full border-green-500/30">
+                    <span class="text-green-400 font-black">100%</span> Trusted
+                </div>
+                <div class="glass-card px-6 py-3 rounded-full border-orange-500/30">
+                    Only <span class="text-orange-400 font-black">$5</span>
+                </div>
+            </div>
+            <button id="boost-order-btn" class="px-12 py-5 rounded-full text-xl font-black btn-glow-purple">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Order Now
+            </button>
+        </div>
+    </header>
+
+    <!-- Requirements -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 md:p-12 rounded-3xl border-l-8 border-cyan-500">
+                <h2 class="text-3xl font-black mb-8 flex items-center">
+                    <i class="fa-solid fa-list-check text-cyan-500 mr-4"></i> REQUIREMENTS
+                </h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold mr-4 shrink-0">1</div>
+                        <p class="text-lg text-gray-300">At least <span class="text-white font-bold">4 slots</span> must be available in your guild.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold mr-4 shrink-0">2</div>
+                        <p class="text-lg text-gray-300">You must allow <span class="text-white font-bold">members for all</span> on the requesting day.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold mr-4 shrink-0">3</div>
+                        <p class="text-lg text-gray-300">The process will take about <span class="text-white font-bold">10 hours</span> to complete.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badge Section -->
+    <section class="py-24 bg-white/2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block p-1 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 mb-8">
+                <div class="bg-black rounded-full px-8 py-2">
+                    <span class="text-sm font-bold tracking-widest uppercase">Why Choose Us?</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-rocket text-4xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Super Fast</h3>
+                    <p class="text-gray-400">We use advanced methods to boost your glory in record time.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-cyan-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-user-shield text-4xl text-cyan-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Safe & Secure</h3>
+                    <p class="text-gray-400">No risk to your account or guild. 100% legal methods.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-20 h-20 bg-green-600/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-headset text-4xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-400">Our team is always ready to assist you with your orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-black mb-4 neon-text-purple">BLACK LTZ</h2>
+            <p class="text-gray-500 mb-6">100% Trusted Gaming Service Provider in Sri Lanka</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+            </div>
+            <p class="text-sm text-gray-600">© 2026 BLACK LTZ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I need Guild Boost Service')" class="floating-whatsapp w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="/src/script.js"></script>
+</body>
+</html>

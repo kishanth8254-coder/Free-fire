@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK LTZ | Diamond Store</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-black text-white font-['Inter']">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-black tracking-tighter neon-text-purple">BLACK LTZ</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Home</a>
+                        <a href="/topup.html" class="px-3 py-2 rounded-md text-sm font-medium text-brand-purple transition-colors">Top-Up</a>
+                        <a href="/boost.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Guild Boost</a>
+                        <a href="/panel.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Panel Store</a>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="px-4 py-2 rounded-full text-sm font-bold btn-glow-purple text-white">WhatsApp Order</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+            <div class="flex flex-col pt-10">
+                <a href="/" class="mobile-menu-link text-white">Home</a>
+                <a href="/topup.html" class="mobile-menu-link text-brand-purple">Top-Up</a>
+                <a href="/boost.html" class="mobile-menu-link text-white">Guild Boost</a>
+                <a href="/panel.html" class="mobile-menu-link text-white">Panel Store</a>
+                <div class="p-8">
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="block w-full text-center py-4 rounded-full text-lg font-bold btn-glow-purple text-white">WhatsApp Order</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40 hero-gradient">
+        <div class="glow-circle w-96 h-96 bg-purple-600/20 top-0 -left-20"></div>
+        <div class="glow-circle w-96 h-96 bg-cyan-600/10 bottom-0 -right-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
+                <span class="block text-white">BLACK LTZ</span>
+                <span class="block neon-text-purple">DIAMOND STORE</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-10">
+                Trusted account seller and fastest UID top-up service in Sri Lanka.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#packages" class="px-8 py-4 rounded-full text-lg font-bold btn-glow-purple">View Packages</a>
+                <a href="#order-form" class="px-8 py-4 rounded-full text-lg font-bold border border-white/20 hover:bg-white/10 transition-all">Order Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Badges -->
+    <section class="py-12 border-y border-white/5 bg-white/2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-bolt text-3xl text-yellow-400 mb-3"></i>
+                    <span class="font-bold uppercase tracking-widest text-xs">Fast Delivery</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-shield-halved text-3xl text-green-400 mb-3"></i>
+                    <span class="font-bold uppercase tracking-widest text-xs">Trusted Seller</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-clock text-3xl text-cyan-400 mb-3"></i>
+                    <span class="font-bold uppercase tracking-widest text-xs">Daily Service</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-wallet text-3xl text-orange-400 mb-3"></i>
+                    <span class="font-bold uppercase tracking-widest text-xs">Bank & Ez Cash</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diamond Packages -->
+    <section id="packages" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black neon-text-cyan mb-4">DIAMOND PACKAGES</h2>
+                <div class="h-1 w-24 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Package Cards -->
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="25 Diamonds" data-price="80">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">25 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 80</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="50 Diamonds" data-price="160">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">50 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 160</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="100 Diamonds" data-price="300">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">100 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 300</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="200 Diamonds" data-price="600">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">200 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 600</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="310 Diamonds" data-price="900">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">310 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 900</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="520 Diamonds" data-price="1520">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">520 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 1520</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="1060 Diamonds" data-price="2980">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">1060 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 2980</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="1580 Diamonds" data-price="4490">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">1580 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 4490</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="2180 Diamonds" data-price="6020">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">2180 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 6020</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="5000 Diamonds" data-price="13930">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">5000 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 13930</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="5600 Diamonds" data-price="14900">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">5600 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 14900</p>
+                </div>
+                <div class="package-card glass-card p-6 rounded-2xl text-center cursor-pointer diamond-shine" data-package="11500 Diamonds" data-price="30690">
+                    <div class="relative mb-4">
+                        <span class="emoji-diamond-glow">💎</span>
+                    </div>
+                    <h3 class="font-black text-xl mb-1">11500 <span class="text-cyan-400">💎</span></h3>
+                    <p class="text-brand-yellow font-bold">LKR 30690</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="py-24 bg-white/2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black neon-text-purple mb-4">MEMBERSHIPS</h2>
+                <div class="h-1 w-24 bg-purple-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500" data-package="Weekly Lite" data-price="120">
+                    <h3 class="text-2xl font-black mb-2">Weekly Lite</h3>
+                    <p class="text-4xl font-black text-brand-purple mb-4">LKR 120</p>
+                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Instant Diamonds</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Daily Rewards</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
+                </div>
+                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 scale-105 bg-purple-900/10" data-package="Weekly" data-price="500">
+                    <div class="bg-purple-600 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full inline-block mb-4">Most Popular</div>
+                    <h3 class="text-2xl font-black mb-2">Weekly</h3>
+                    <p class="text-4xl font-black text-brand-purple mb-4">LKR 500</p>
+                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 450+ Diamonds Total</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Special Badge</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
+                </div>
+                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500" data-package="Monthly" data-price="2500">
+                    <h3 class="text-2xl font-black mb-2">Monthly</h3>
+                    <p class="text-4xl font-black text-brand-purple mb-4">LKR 2500</p>
+                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 2600+ Diamonds Total</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Premium Rewards</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section id="order-form" class="py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 md:p-12 rounded-3xl neon-border-purple">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-black mb-2">UID ORDER FORM</h2>
+                    <p class="text-gray-400">Fill the details to complete your order via WhatsApp</p>
+                </div>
+
+                <form id="topup-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Player UID</label>
+                            <input type="text" id="player-uid" required placeholder="Enter UID" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Player Name</label>
+                            <input type="text" id="player-name" required placeholder="Enter Name" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Select Package</label>
+                        <select id="package-select" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors appearance-none">
+                            <option value="" disabled selected>Choose a package</option>
+                            <option value="25 Diamonds">25 Diamonds - LKR 80</option>
+                            <option value="50 Diamonds">50 Diamonds - LKR 160</option>
+                            <option value="100 Diamonds">100 Diamonds - LKR 300</option>
+                            <option value="200 Diamonds">200 Diamonds - LKR 600</option>
+                            <option value="310 Diamonds">310 Diamonds - LKR 900</option>
+                            <option value="520 Diamonds">520 Diamonds - LKR 1520</option>
+                            <option value="1060 Diamonds">1060 Diamonds - LKR 2980</option>
+                            <option value="1580 Diamonds">1580 Diamonds - LKR 4490</option>
+                            <option value="2180 Diamonds">2180 Diamonds - LKR 6020</option>
+                            <option value="5000 Diamonds">5000 Diamonds - LKR 13930</option>
+                            <option value="5600 Diamonds">5600 Diamonds - LKR 14900</option>
+                            <option value="11500 Diamonds">11500 Diamonds - LKR 30690</option>
+                            <option value="Weekly Lite">Weekly Lite - LKR 120</option>
+                            <option value="Weekly">Weekly - LKR 500</option>
+                            <option value="Monthly">Monthly - LKR 2500</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Payment Method</label>
+                        <select id="payment-method" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors appearance-none">
+                            <option value="Bank Transfer">Bank Transfer</option>
+                            <option value="Ez Cash">Ez Cash</option>
+                            <option value="M Cash">M Cash</option>
+                            <option value="Reload">Reload</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Extra Note (Optional)</label>
+                        <textarea id="extra-note" rows="3" placeholder="Anything else?" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl btn-glow-green text-lg font-black uppercase tracking-widest">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> Order on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-black mb-4 neon-text-purple">BLACK LTZ</h2>
+            <p class="text-gray-500 mb-6">100% Trusted Gaming Service Provider in Sri Lanka</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+            </div>
+            <p class="text-sm text-gray-600">© 2026 BLACK LTZ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I need help!')" class="floating-whatsapp w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="/src/script.js"></script>
+</body>
+</html>
