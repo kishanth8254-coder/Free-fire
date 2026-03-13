@@ -1,3 +1,12 @@
+function generateOrderId() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let result = 'BL-';
+    for (let i = 0; i < 6; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+}
+
 function openWhatsApp(message) {
     const phoneNumber = "94761731102";
     const encodedMessage = encodeURIComponent(message);
@@ -75,20 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const pkg = document.getElementById('modal-package').value;
             const method = document.getElementById('modal-payment-method').value;
             const note = document.getElementById('modal-note').value;
+            const orderId = generateOrderId();
             
-            let message = `Hi BLACK LTZ, I want to order:\nPackage: ${pkg}\nPayment Method: ${method}`;
+            let message = `*╔══════════════════╗*\n`;
+            message += `*   🕹️  BLACK LTZ ORDER  🕹️   *\n`;
+            message += `*╚══════════════════╝*\n\n`;
+            message += `*🆔 Order ID :* ${orderId}\n`;
+            message += `*📦 Package  :* ${pkg}\n`;
+            message += `*💳 Payment  :* ${method}\n`;
+            message += `*──────────────────*\n`;
 
             const uidInput = document.getElementById('modal-uid');
             const playerNameInput = document.getElementById('modal-player-name');
             const guildNameInput = document.getElementById('modal-guild-name');
             const platformInput = document.getElementById('modal-platform');
 
-            if (uidInput) message += `\nUID: ${uidInput.value}`;
-            if (playerNameInput) message += `\nPlayer Name: ${playerNameInput.value}`;
-            if (guildNameInput) message += `\nGuild Name: ${guildNameInput.value}`;
-            if (platformInput) message += `\nPlatform: ${platformInput.value}`;
+            if (uidInput) message += `*👤 UID      :* ${uidInput.value}\n`;
+            if (playerNameInput) message += `*🏷️ Name     :* ${playerNameInput.value}\n`;
+            if (guildNameInput) message += `*🏰 Guild    :* ${guildNameInput.value}\n`;
+            if (platformInput) message += `*📱 Platform :* ${platformInput.value}\n`;
             
-            if (note) message += `\nNote: ${note}`;
+            if (note) message += `*📝 Note     :* ${note}\n`;
+            
+            message += `*──────────────────*\n`;
+            message += `\n*🚀 Please process my order!*`;
 
             openWhatsApp(message);
             closeModal();
