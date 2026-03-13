@@ -163,6 +163,46 @@
         </div>
     </section>
 
+    <!-- Order Modal -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content glass-card p-8 rounded-3xl neon-border-purple relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            <div class="text-center mb-8">
+                <h2 id="modal-title" class="text-2xl font-black mb-2 uppercase tracking-tight">ORDER FORM</h2>
+                <p class="text-gray-400 text-sm">Fill the details to complete your order via WhatsApp</p>
+            </div>
+
+            <form id="modal-order-form" class="space-y-4">
+                <input type="hidden" id="modal-package">
+                
+                <div id="extra-fields" class="space-y-4">
+                    <!-- Dynamic fields will be injected here -->
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Payment Method</label>
+                    <select id="modal-payment-method" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors appearance-none">
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Ez Cash">Ez Cash</option>
+                        <option value="M Cash">M Cash</option>
+                        <option value="Reload">Reload</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Extra Note (Optional)</label>
+                    <textarea id="modal-note" rows="2" placeholder="Anything else?" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl btn-glow-green text-lg font-black uppercase tracking-widest">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Order on WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-black border-t border-white/10 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
