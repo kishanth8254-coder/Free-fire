@@ -1,14 +1,9 @@
-@import "tailwindcss";
-
-@theme {
+:root {
   --color-brand-purple: #a855f7;
   --color-brand-cyan: #06b6d4;
   --color-brand-yellow: #eab308;
   --color-brand-orange: #f97316;
   --color-brand-green: #22c55e;
-}
-
-:root {
   --bg-dark: #050505;
   --glow-purple: rgba(168, 85, 247, 0.5);
   --glow-cyan: rgba(6, 182, 212, 0.5);
@@ -229,3 +224,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #a855f7;
 }
+
+/* Tailwind 4 Compatibility Colors */
+.text-brand-purple { color: var(--color-brand-purple); }
+.text-brand-cyan { color: var(--color-brand-cyan); }
+.text-brand-yellow { color: var(--color-brand-yellow); }
+.text-brand-orange { color: var(--color-brand-orange); }
+.text-brand-green { color: var(--color-brand-green); }
+.bg-brand-purple { background-color: var(--color-brand-purple); }
+.bg-brand-cyan { background-color: var(--color-brand-cyan); }

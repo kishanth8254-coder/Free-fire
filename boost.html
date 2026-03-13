@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLACK LTZ | Guild Boost</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple': '#a855f7',
+                        'brand-cyan': '#06b6d4',
+                        'brand-yellow': '#eab308',
+                        'brand-orange': '#f97316',
+                        'brand-green': '#22c55e',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -18,14 +33,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-black tracking-tighter neon-text-purple">BLACK LTZ</a>
+                    <a href="index.html" class="text-2xl font-black tracking-tighter neon-text-purple">BLACK LTZ</a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Home</a>
-                        <a href="/topup.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Top-Up</a>
-                        <a href="/boost.html" class="px-3 py-2 rounded-md text-sm font-medium text-brand-cyan transition-colors">Guild Boost</a>
-                        <a href="/panel.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Panel Store</a>
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Home</a>
+                        <a href="topup.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Top-Up</a>
+                        <a href="boost.html" class="px-3 py-2 rounded-md text-sm font-medium text-brand-cyan transition-colors">Guild Boost</a>
+                        <a href="panel.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Panel Store</a>
                         <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="px-4 py-2 rounded-full text-sm font-bold btn-glow-purple text-white">WhatsApp Order</a>
                     </div>
                 </div>
@@ -40,10 +55,10 @@
         <!-- Mobile Menu Container -->
         <div id="mobile-menu" class="mobile-menu md:hidden">
             <div class="flex flex-col pt-10">
-                <a href="/" class="mobile-menu-link text-white">Home</a>
-                <a href="/topup.html" class="mobile-menu-link text-white">Top-Up</a>
-                <a href="/boost.html" class="mobile-menu-link text-brand-cyan">Guild Boost</a>
-                <a href="/panel.html" class="mobile-menu-link text-white">Panel Store</a>
+                <a href="index.html" class="mobile-menu-link text-white">Home</a>
+                <a href="topup.html" class="mobile-menu-link text-white">Top-Up</a>
+                <a href="boost.html" class="mobile-menu-link text-brand-cyan">Guild Boost</a>
+                <a href="panel.html" class="mobile-menu-link text-white">Panel Store</a>
                 <div class="p-8">
                     <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="block w-full text-center py-4 rounded-full text-lg font-bold btn-glow-purple text-white">WhatsApp Order</a>
                 </div>
@@ -156,6 +171,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="/src/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
