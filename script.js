@@ -61,6 +61,13 @@ function openModal(pkgName, pkgPrice, type = 'topup') {
                 <input type="text" id="modal-tiktok-link" required placeholder="Enter Link or Username" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
             </div>
         `;
+    } else if (type === 'webdev') {
+        extraFields.innerHTML = `
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Project Description / Requirements</label>
+                <textarea id="modal-web-desc" required placeholder="Describe your website needs..." class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-indigo-500 transition-colors resize-none" rows="3"></textarea>
+            </div>
+        `;
     }
 
     modal.classList.add('active');
@@ -106,12 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const guildNameInput = document.getElementById('modal-guild-name');
             const platformInput = document.getElementById('modal-platform');
             const tiktokLinkInput = document.getElementById('modal-tiktok-link');
+            const webDescInput = document.getElementById('modal-web-desc');
 
             if (uidInput) message += `*👤 UID      :* ${uidInput.value}\n`;
             if (playerNameInput) message += `*🏷️ Name     :* ${playerNameInput.value}\n`;
             if (guildNameInput) message += `*🏰 Guild    :* ${guildNameInput.value}\n`;
             if (platformInput) message += `*📱 Platform :* ${platformInput.value}\n`;
             if (tiktokLinkInput) message += `*🔗 TikTok   :* ${tiktokLinkInput.value}\n`;
+            if (webDescInput) message += `*💻 Project  :* ${webDescInput.value}\n`;
             
             if (note) message += `*📝 Note     :* ${note}\n`;
             
