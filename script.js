@@ -78,111 +78,7 @@ function closeModal() {
     if (modal) modal.classList.remove('active');
 }
 
-// Dynamic Service Rendering
-async function loadServices() {
-    try {
-        const res = await fetch('/api/services');
-        const data = await res.json();
-        
-        // Render Top-Up (Memberships)
-        const topupContainer = document.getElementById('topup-container');
-        if (topupContainer && data.topup) {
-            topupContainer.innerHTML = data.topup.map(item => `
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 cursor-pointer ${item.popular ? 'scale-105 bg-purple-900/10' : ''}" data-package="${item.name}" data-price="${item.price}" data-type="topup">
-                    ${item.popular ? '<div class="bg-purple-600 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full inline-block mb-4">Most Popular</div>' : ''}
-                    <h3 class="text-2xl font-black mb-2">${item.name}</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR ${item.price}</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        ${item.features.map(f => `<li><i class="fa-solid fa-check text-green-500 mr-2"></i> ${f}</li>`).join('')}
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
-                </div>
-            `).join('');
-        }
-
-        // Render Boost
-        const boostContainer = document.getElementById('boost-container');
-        if (boostContainer && data.boost) {
-            boostContainer.innerHTML = data.boost.map(item => `
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 cursor-pointer" data-package="${item.name}" data-price="${item.price}" data-type="boost">
-                    <h3 class="text-2xl font-black mb-2">${item.name}</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR ${item.price}</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        ${item.features.map(f => `<li><i class="fa-solid fa-check text-green-500 mr-2"></i> ${f}</li>`).join('')}
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
-                </div>
-            `).join('');
-        }
-
-        // Render Panel
-        const panelContainer = document.getElementById('panel-container');
-        if (panelContainer && data.panel) {
-            panelContainer.innerHTML = data.panel.map(item => `
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 cursor-pointer" data-package="${item.name}" data-price="${item.price}" data-type="panel">
-                    <h3 class="text-2xl font-black mb-2">${item.name}</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR ${item.price}</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        ${item.features.map(f => `<li><i class="fa-solid fa-check text-green-500 mr-2"></i> ${f}</li>`).join('')}
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
-                </div>
-            `).join('');
-        }
-
-        // Render TikTok
-        const tiktokContainer = document.getElementById('tiktok-container');
-        if (tiktokContainer && data.tiktok) {
-            tiktokContainer.innerHTML = data.tiktok.map(item => `
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 cursor-pointer" data-package="${item.name}" data-price="${item.price}" data-type="tiktok">
-                    <h3 class="text-2xl font-black mb-2">${item.name}</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR ${item.price}</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        ${item.features.map(f => `<li><i class="fa-solid fa-check text-green-500 mr-2"></i> ${f}</li>`).join('')}
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
-                </div>
-            `).join('');
-        }
-
-        // Render WebDev
-        const webdevContainer = document.getElementById('webdev-container');
-        if (webdevContainer && data.webdev) {
-            webdevContainer.innerHTML = data.webdev.map(item => `
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-indigo-500 cursor-pointer" data-package="${item.name}" data-price="${item.price}" data-type="webdev">
-                    <h3 class="text-2xl font-black mb-2">${item.name}</h3>
-                    <p class="text-4xl font-black text-brand-indigo mb-4">LKR ${item.price}</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        ${item.features.map(f => `<li><i class="fa-solid fa-check text-indigo-500 mr-2"></i> ${f}</li>`).join('')}
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-indigo-600 font-bold hover:bg-indigo-700 transition-colors">Select</button>
-                </div>
-            `).join('');
-        }
-
-        // Re-attach event listeners to new elements
-        attachEventListeners();
-
-    } catch (error) {
-        console.error('Failed to load services:', error);
-    }
-}
-
-function attachEventListeners() {
-    const packageCards = document.querySelectorAll('.package-card');
-    packageCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const pkgName = card.dataset.package;
-            const pkgPrice = card.dataset.price;
-            const type = card.dataset.type || 'topup';
-            openModal(pkgName, pkgPrice, type);
-        });
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    loadServices();
-    
     // Modal Close Logic
     const closeBtn = document.getElementById('close-modal');
     const modalOverlay = document.getElementById('order-modal');
@@ -202,7 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const pkg = document.getElementById('modal-package').value;
             const method = document.getElementById('modal-payment-method').value;
             const note = document.getElementById('modal-note').value;
+            const orderId = generateOrderId();
             
+            let message = `*╔══════════════════╗*\n`;
+            message += `*   🕹️  BLACK LTZ ORDER  🕹️   *\n`;
+            message += `*╚══════════════════╝*\n\n`;
+            message += `*🆔 Order ID :* ${orderId}\n`;
+            message += `*📦 Package  :* ${pkg}\n`;
+            message += `*💳 Payment  :* ${method}\n`;
+            message += `*──────────────────*\n`;
+
             const uidInput = document.getElementById('modal-uid');
             const playerNameInput = document.getElementById('modal-player-name');
             const guildNameInput = document.getElementById('modal-guild-name');
@@ -210,13 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const tiktokLinkInput = document.getElementById('modal-tiktok-link');
             const webDescInput = document.getElementById('modal-web-desc');
 
-            let message = `*NEW ORDER - ${generateOrderId()}*\n`;
-            message += `*──────────────────*\n`;
-            message += `*📦 Package  :* ${pkg}\n`;
-            message += `*💳 Method   :* ${method}\n`;
-            
-            if (uidInput) message += `*🆔 UID      :* ${uidInput.value}\n`;
-            if (playerNameInput) message += `*👤 Name     :* ${playerNameInput.value}\n`;
+            if (uidInput) message += `*👤 UID      :* ${uidInput.value}\n`;
+            if (playerNameInput) message += `*🏷️ Name     :* ${playerNameInput.value}\n`;
             if (guildNameInput) message += `*🏰 Guild    :* ${guildNameInput.value}\n`;
             if (platformInput) message += `*📱 Platform :* ${platformInput.value}\n`;
             if (tiktokLinkInput) message += `*🔗 TikTok   :* ${tiktokLinkInput.value}\n`;
@@ -231,6 +131,35 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         });
     }
+
+    // Package Card Click Logic
+    const packageCards = document.querySelectorAll('.package-card');
+    packageCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const pkgName = card.dataset.package;
+            const pkgPrice = card.dataset.price;
+            const type = card.dataset.type || 'topup';
+            openModal(pkgName, pkgPrice, type);
+        });
+    });
+
+    // Guild Boost Logic
+    const boostBtn = document.getElementById('boost-order-btn');
+    if (boostBtn) {
+        boostBtn.addEventListener('click', () => {
+            openModal("Guild Boost Service", "Contact for Price", 'boost');
+        });
+    }
+
+    // Panel Store Logic
+    const panelBtns = document.querySelectorAll('.panel-order-btn');
+    panelBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const platform = btn.dataset.platform;
+            const pkg = btn.dataset.package;
+            openModal(`${platform} - ${pkg}`, "Contact for Price", 'panel');
+        });
+    });
 
     // Mobile Menu Toggle
     const menuBtn = document.getElementById('mobile-menu-btn');

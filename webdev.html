@@ -78,8 +78,98 @@
 
     <!-- Packages Grid -->
     <section class="max-w-7xl mx-auto px-4 pb-32">
-        <div id="webdev-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Services will be loaded dynamically from script.js -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Portfolio -->
+            <div class="package-card group" data-package="Basic Portfolio Website" data-price="Rs. 5,000+" data-type="webdev">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+                <div class="relative h-full glass-card p-8 rounded-3xl border border-white/5 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-indigo-600/20 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-user text-2xl text-indigo-500"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-indigo-600/20 text-indigo-400 px-3 py-1 rounded-full uppercase tracking-widest">Personal</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Portfolio Site</h3>
+                    <p class="text-gray-500 text-sm mb-6">Perfect for individual gamers or streamers to showcase their stats and content.</p>
+                    <ul class="text-sm text-gray-400 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> 1 Page Custom Design</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Mobile Responsive</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Social Media Integration</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Basic SEO Setup</li>
+                    </ul>
+                    <div class="text-2xl font-black text-white mb-6">Rs. 5,000<span class="text-sm font-normal text-gray-500"> / starting</span></div>
+                    <button class="w-full py-4 rounded-2xl bg-indigo-600 text-white font-black uppercase tracking-widest text-xs hover:btn-glow-indigo transition-all">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="package-card group" data-package="Business Website" data-price="Rs. 15,000+" data-type="webdev">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+                <div class="relative h-full glass-card p-8 rounded-3xl border border-white/5 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-indigo-600/20 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-briefcase text-2xl text-indigo-500"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-indigo-600/20 text-indigo-400 px-3 py-1 rounded-full uppercase tracking-widest">Business</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Business Site</h3>
+                    <p class="text-gray-500 text-sm mb-6">A professional multi-page website for your brand or gaming organization.</p>
+                    <ul class="text-sm text-gray-400 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Up to 5 Pages</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Custom Branding</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Contact Forms</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Google Maps Integration</li>
+                    </ul>
+                    <div class="text-2xl font-black text-white mb-6">Rs. 15,000<span class="text-sm font-normal text-gray-500"> / starting</span></div>
+                    <button class="w-full py-4 rounded-2xl bg-indigo-600 text-white font-black uppercase tracking-widest text-xs hover:btn-glow-indigo transition-all">Order Now</button>
+                </div>
+            </div>
+
+            <!-- E-commerce -->
+            <div class="package-card group" data-package="E-commerce Store" data-price="Rs. 30,000+" data-type="webdev">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+                <div class="relative h-full glass-card p-8 rounded-3xl border border-white/5 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-indigo-600/20 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-cart-shopping text-2xl text-indigo-500"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-indigo-600/20 text-indigo-400 px-3 py-1 rounded-full uppercase tracking-widest">Store</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Online Store</h3>
+                    <p class="text-gray-500 text-sm mb-6">Sell your products or services online with a full-featured e-commerce platform.</p>
+                    <ul class="text-sm text-gray-400 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Product Catalog</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Payment Gateway</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Admin Dashboard</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Inventory Management</li>
+                    </ul>
+                    <div class="text-2xl font-black text-white mb-6">Rs. 30,000<span class="text-sm font-normal text-gray-500"> / starting</span></div>
+                    <button class="w-full py-4 rounded-2xl bg-indigo-600 text-white font-black uppercase tracking-widest text-xs hover:btn-glow-indigo transition-all">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Custom -->
+            <div class="package-card group" data-package="Custom Web Application" data-price="Contact for Price" data-type="webdev">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+                <div class="relative h-full glass-card p-8 rounded-3xl border border-white/5 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-indigo-600/20 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-code text-2xl text-indigo-500"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-indigo-600/20 text-indigo-400 px-3 py-1 rounded-full uppercase tracking-widest">Custom</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Custom App</h3>
+                    <p class="text-gray-500 text-sm mb-6">Complex web applications, dashboards, or custom tools tailored to your needs.</p>
+                    <ul class="text-sm text-gray-400 space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Custom Logic & API</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Database Integration</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> User Authentication</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-500"></i> Scalable Architecture</li>
+                    </ul>
+                    <div class="text-2xl font-black text-white mb-6">Contact Us</div>
+                    <button class="w-full py-4 rounded-2xl bg-indigo-600 text-white font-black uppercase tracking-widest text-xs hover:btn-glow-indigo transition-all">Order Now</button>
+                </div>
+            </div>
         </div>
     </section>
 
