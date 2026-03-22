@@ -22,34 +22,130 @@
   ],
   "boost": [
     {
-      "id": "1",
+      "id": "b1",
       "name": "Guild Boost Level 1",
       "price": "500",
       "features": ["10 Slots", "Basic Badge"]
+    },
+    {
+      "id": "b2",
+      "name": "Guild Boost Level 2",
+      "price": "1000",
+      "features": ["20 Slots", "Silver Badge"]
+    },
+    {
+      "id": "b3",
+      "name": "Guild Boost Level 3",
+      "price": "2000",
+      "features": ["50 Slots", "Gold Badge"]
     }
   ],
   "panel": [
     {
-      "id": "1",
-      "name": "iOS Panel",
+      "id": "p1",
+      "name": "Fluorite 1 Day (iOS)",
+      "price": "1000",
+      "features": ["iOS Support", "Safe & Secure"]
+    },
+    {
+      "id": "p2",
+      "name": "Fluorite 7 Days (iOS)",
+      "price": "3000",
+      "features": ["iOS Support", "Safe & Secure"]
+    },
+    {
+      "id": "p3",
+      "name": "Fluorite 31 Days (iOS)",
+      "price": "6200",
+      "features": ["iOS Support", "Safe & Secure"]
+    },
+    {
+      "id": "p4",
+      "name": "E Sign 1 Year (iOS)",
+      "price": "2500",
+      "features": ["iOS Support", "Safe & Secure"]
+    },
+    {
+      "id": "p5",
+      "name": "Drip Client 1 Day (Android)",
+      "price": "1000",
+      "features": ["Android Support", "Safe & Secure"]
+    },
+    {
+      "id": "p6",
+      "name": "Drip Client 7 Days (Android)",
       "price": "1500",
-      "features": ["Anti-Ban", "Full Access"]
+      "features": ["Android Support", "Safe & Secure"]
+    },
+    {
+      "id": "p7",
+      "name": "Drip Client 15 Days (Android)",
+      "price": "2100",
+      "features": ["Android Support", "Safe & Secure"]
+    },
+    {
+      "id": "p8",
+      "name": "Drip Client 30 Days (Android)",
+      "price": "3200",
+      "features": ["Android Support", "Safe & Secure"]
+    },
+    {
+      "id": "p9",
+      "name": "HG Tools 15 Days (Android)",
+      "price": "2100",
+      "features": ["Android Support", "Safe & Secure"]
+    },
+    {
+      "id": "p10",
+      "name": "HG Tools 30 Days (Android)",
+      "price": "4000",
+      "features": ["Android Support", "Safe & Secure"]
     }
   ],
   "tiktok": [
     {
-      "id": "1",
-      "name": "1k Followers",
-      "price": "300",
-      "features": ["Real Users", "Fast Delivery"]
+      "id": "t1",
+      "name": "1000 Likes + 10k Views",
+      "price": "120",
+      "features": ["Fast Delivery", "High Quality"]
+    },
+    {
+      "id": "t2",
+      "name": "2000 Likes + 20k Views",
+      "price": "220",
+      "features": ["Fast Delivery", "High Quality"]
+    },
+    {
+      "id": "t3",
+      "name": "3000 Likes + 30k Views",
+      "price": "340",
+      "features": ["Fast Delivery", "High Quality"]
+    },
+    {
+      "id": "t4",
+      "name": "5000 Likes + 50k Views",
+      "price": "540",
+      "features": ["Fast Delivery", "High Quality"]
     }
   ],
   "webdev": [
     {
-      "id": "1",
+      "id": "w1",
       "name": "Portfolio Website",
       "price": "5000",
-      "features": ["Mobile Responsive", "SEO Ready"]
+      "features": ["1 Page Design", "Mobile Responsive"]
+    },
+    {
+      "id": "w2",
+      "name": "Business Website",
+      "price": "15000",
+      "features": ["Up to 5 Pages", "Custom Branding"]
+    },
+    {
+      "id": "w3",
+      "name": "Online Store",
+      "price": "30000",
+      "features": ["Product Catalog", "Payment Gateway"]
     }
   ]
 }

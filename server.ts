@@ -27,7 +27,7 @@ async function startServer() {
 
   app.post("/api/services", (req, res) => {
     const { password, data } = req.body;
-    const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
+    const adminPassword = process.env.ADMIN_PASSWORD || "Mr_Mpbs0000";
 
     if (password !== adminPassword) {
       return res.status(401).json({ error: "Unauthorized" });
