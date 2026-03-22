@@ -1,0 +1,46 @@
+{
+  "topup": [
+    { "id": "t1", "name": "25 Diamonds", "price": "80", "features": ["Instant UID delivery"] },
+    { "id": "t2", "name": "50 Diamonds", "price": "160", "features": ["Instant UID delivery"] },
+    { "id": "t3", "name": "100 Diamonds", "price": "300", "features": ["Instant UID delivery"] },
+    { "id": "t4", "name": "200 Diamonds", "price": "600", "features": ["Instant UID delivery"] },
+    { "id": "t5", "name": "310 Diamonds", "price": "900", "features": ["Instant UID delivery"] },
+    { "id": "t6", "name": "520 Diamonds", "price": "1520", "features": ["Instant UID delivery"] },
+    { "id": "t7", "name": "1060 Diamonds", "price": "2980", "features": ["Instant UID delivery"] },
+    { "id": "t8", "name": "1580 Diamonds", "price": "4490", "features": ["Instant UID delivery"] },
+    { "id": "t9", "name": "2180 Diamonds", "price": "6020", "features": ["Instant UID delivery"] },
+    { "id": "t10", "name": "5000 Diamonds", "price": "13930", "features": ["Instant UID delivery"] },
+    { "id": "t11", "name": "5600 Diamonds", "price": "14900", "features": ["Instant UID delivery"] },
+    { "id": "t12", "name": "11500 Diamonds", "price": "30690", "features": ["Instant UID delivery"] },
+    { "id": "m1", "name": "Weekly Lite", "price": "120", "features": ["Instant Diamonds", "Daily Rewards"] },
+    { "id": "m2", "name": "Weekly", "price": "500", "features": ["450+ Diamonds Total", "Special Badge"], "popular": true },
+    { "id": "m3", "name": "Monthly", "price": "2500", "features": ["2600+ Diamonds Total", "Premium Rewards"] }
+  ],
+  "boost": [
+    { "id": "b1", "name": "Guild Boost Service", "price": "5", "features": ["135,500 Glory in 1.5 Hours", "100% Trusted"] }
+  ],
+  "panel": [
+    { "id": "p1", "name": "iOS Fluorite 1 Day", "price": "1000", "features": ["iOS Platform"] },
+    { "id": "p2", "name": "iOS Fluorite 7 Days", "price": "3000", "features": ["iOS Platform"] },
+    { "id": "p3", "name": "iOS Fluorite 31 Days", "price": "6200", "features": ["iOS Platform"] },
+    { "id": "p4", "name": "iOS E Sign 1 Year", "price": "2500", "features": ["iOS Platform"] },
+    { "id": "p5", "name": "Android Drip Client 1 Day", "price": "1000", "features": ["Android Platform"] },
+    { "id": "p6", "name": "Android Drip Client 7 Days", "price": "1500", "features": ["Android Platform"] },
+    { "id": "p7", "name": "Android Drip Client 15 Days", "price": "2100", "features": ["Android Platform"] },
+    { "id": "p8", "name": "Android Drip Client 30 Days", "price": "4500", "features": ["Android Platform"] },
+    { "id": "p9", "name": "Android HG Tools 15 Days", "price": "2100", "features": ["Android Platform"] },
+    { "id": "p10", "name": "Android HG Tools 30 Days", "price": "4000", "features": ["Android Platform"] }
+  ],
+  "tiktok": [
+    { "id": "tk1", "name": "1000 Likes + 10k Views", "price": "120", "features": ["Fast Delivery"] },
+    { "id": "tk2", "name": "2000 Likes + 20k Views", "price": "220", "features": ["Fast Delivery"] },
+    { "id": "tk3", "name": "3000 Likes + 30k Views", "price": "340", "features": ["Fast Delivery"] },
+    { "id": "tk4", "name": "5000 Likes + 50k Views", "price": "540", "features": ["Fast Delivery"] }
+  ],
+  "webdev": [
+    { "id": "wd1", "name": "Basic Portfolio Website", "price": "5000", "features": ["1 Page Custom Design", "Mobile Responsive", "Social Media Integration", "Basic SEO Setup"] },
+    { "id": "wd2", "name": "Business Website", "price": "15000", "features": ["Up to 5 Pages", "Custom Branding", "Contact Forms", "Google Maps Integration"] },
+    { "id": "wd3", "name": "Online Store", "price": "30000", "features": ["Product Catalog", "Payment Gateway", "Admin Dashboard", "Inventory Management"] },
+    { "id": "wd4", "name": "Custom Web Application", "price": "Contact", "features": ["Custom Logic & API", "Database Integration", "User Authentication", "Scalable Architecture"] }
+  ]
+}

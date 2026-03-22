@@ -1,20 +1,35 @@
 {
-  "name": "black-ltz-gaming-store",
-  "private": true,
-  "version": "0.0.0",
+  "name": "black-ltz",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Premium Gaming Store",
+  "main": "index.html",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
-
+    "clsx": "^2.1.1",
+    "firebase": "^10.8.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^0.344.0",
+    "motion": "^11.0.8",
+    "react": "^18.3.1",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1"
   }
 }

@@ -90,50 +90,8 @@
     <!-- Offers Section -->
     <section class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Offer 1 -->
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-t-4 border-pink-500 cursor-pointer group" data-package="1000 Likes + 10k Views" data-price="120" data-type="tiktok">
-                    <div class="mb-6">
-                        <i class="fa-brands fa-tiktok text-5xl text-white group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h3 class="text-xl font-black mb-2">1000 Likes</h3>
-                    <p class="text-gray-400 mb-4">+ 10k Views</p>
-                    <p class="text-3xl font-black text-brand-yellow mb-6">Rs. 120</p>
-                    <button class="w-full py-3 rounded-xl bg-pink-600 font-bold hover:bg-pink-700 transition-colors">Buy Now</button>
-                </div>
-
-                <!-- Offer 2 -->
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-t-4 border-pink-500 cursor-pointer group" data-package="2000 Likes + 20k Views" data-price="220" data-type="tiktok">
-                    <div class="mb-6">
-                        <i class="fa-brands fa-tiktok text-5xl text-white group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h3 class="text-xl font-black mb-2">2000 Likes</h3>
-                    <p class="text-gray-400 mb-4">+ 20k Views</p>
-                    <p class="text-3xl font-black text-brand-yellow mb-6">Rs. 220</p>
-                    <button class="w-full py-3 rounded-xl bg-pink-600 font-bold hover:bg-pink-700 transition-colors">Buy Now</button>
-                </div>
-
-                <!-- Offer 3 -->
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-t-4 border-pink-500 cursor-pointer group" data-package="3000 Likes + 30k Views" data-price="340" data-type="tiktok">
-                    <div class="mb-6">
-                        <i class="fa-brands fa-tiktok text-5xl text-white group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h3 class="text-xl font-black mb-2">3000 Likes</h3>
-                    <p class="text-gray-400 mb-4">+ 30k Views</p>
-                    <p class="text-3xl font-black text-brand-yellow mb-6">Rs. 340</p>
-                    <button class="w-full py-3 rounded-xl bg-pink-600 font-bold hover:bg-pink-700 transition-colors">Buy Now</button>
-                </div>
-
-                <!-- Offer 4 -->
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-t-4 border-pink-500 cursor-pointer group" data-package="5000 Likes + 50k Views" data-price="540" data-type="tiktok">
-                    <div class="mb-6">
-                        <i class="fa-brands fa-tiktok text-5xl text-white group-hover:scale-110 transition-transform"></i>
-                    </div>
-                    <h3 class="text-xl font-black mb-2">5000 Likes</h3>
-                    <p class="text-gray-400 mb-4">+ 50k Views</p>
-                    <p class="text-3xl font-black text-brand-yellow mb-6">Rs. 540</p>
-                    <button class="w-full py-3 rounded-xl bg-pink-600 font-bold hover:bg-pink-700 transition-colors">Buy Now</button>
-                </div>
+            <div id="packages-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Dynamic packages will be injected here -->
             </div>
         </div>
     </section>
@@ -197,6 +155,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="script.js"></script>
+    <script type="module" src="/src/public-dynamic.ts"></script>
 </body>
 </html>

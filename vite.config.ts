@@ -1,23 +1,42 @@
-import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { resolve } from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      server: {
-        port: 3000,
-        host: '0.0.0.0',
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        topup: resolve(__dirname, 'topup.html'),
+        boost: resolve(__dirname, 'boost.html'),
+        panel: resolve(__dirname, 'panel.html'),
+        tiktok: resolve(__dirname, 'tiktok.html'),
+        webdev: resolve(__dirname, 'webdev.html'),
+        admin: resolve(__dirname, 'admin.html'),
       },
-      plugins: [],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    },
+  },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+    proxy: {
+      // Redirect admin routes to admin.html in dev
+      '/admin-login': {
+        target: 'http://localhost:3000/admin.html',
+        rewrite: () => '/admin.html'
       },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
+      '/admin-dashboard': {
+        target: 'http://localhost:3000/admin.html',
+        rewrite: () => '/admin.html'
       }
-    };
+    }
+  }
 });
