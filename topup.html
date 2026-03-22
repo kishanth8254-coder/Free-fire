@@ -234,34 +234,11 @@
                 <div class="h-1 w-24 bg-purple-500 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 cursor-pointer" data-package="Weekly Lite" data-price="120">
-                    <h3 class="text-2xl font-black mb-2">Weekly Lite</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR 120</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Instant Diamonds</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Daily Rewards</li>
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
-                </div>
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 scale-105 bg-purple-900/10 cursor-pointer" data-package="Weekly" data-price="500">
-                    <div class="bg-purple-600 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full inline-block mb-4">Most Popular</div>
-                    <h3 class="text-2xl font-black mb-2">Weekly</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR 500</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 450+ Diamonds Total</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Special Badge</li>
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
-                </div>
-                <div class="package-card glass-card p-8 rounded-3xl text-center border-l-4 border-purple-500 cursor-pointer" data-package="Monthly" data-price="2500">
-                    <h3 class="text-2xl font-black mb-2">Monthly</h3>
-                    <p class="text-4xl font-black text-brand-purple mb-4">LKR 2500</p>
-                    <ul class="text-gray-400 text-sm mb-6 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 2600+ Diamonds Total</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Premium Rewards</li>
-                    </ul>
-                    <button class="w-full py-3 rounded-xl bg-purple-600 font-bold hover:bg-purple-700 transition-colors">Select</button>
+            <div id="topup-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Services will be loaded dynamically from script.js -->
+                <div class="col-span-full text-center py-12">
+                    <div class="animate-spin inline-block w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full mb-4"></div>
+                    <p class="text-gray-400">Loading memberships...</p>
                 </div>
             </div>
         </div>
