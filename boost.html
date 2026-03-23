@@ -81,9 +81,20 @@
                 <span class="block text-white">GUILD BOOST</span>
                 <span class="block neon-text-cyan">SERVICE</span>
             </h1>
-            <div id="packages-container" class="flex flex-wrap justify-center gap-6 mb-10">
-                <!-- Dynamic packages will be injected here -->
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <div class="glass-card px-6 py-3 rounded-full border-cyan-500/30">
+                    <span class="text-cyan-400 font-black">135,500</span> Glory in 1.5 Hours
+                </div>
+                <div class="glass-card px-6 py-3 rounded-full border-green-500/30">
+                    <span class="text-green-400 font-black">100%</span> Trusted
+                </div>
+                <div class="glass-card px-6 py-3 rounded-full border-orange-500/30">
+                    Only <span class="text-orange-400 font-black">$5</span>
+                </div>
             </div>
+            <button id="boost-order-btn" class="px-12 py-5 rounded-full text-xl font-black btn-glow-purple">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Order Now
+            </button>
         </div>
     </header>
 
@@ -196,8 +207,7 @@
                 <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
                 <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
             </div>
-            <p class="text-sm text-gray-600 mb-2">© 2026 BLACK LTZ. All rights reserved.</p>
-            <a href="admin.html" class="text-xs text-gray-800 hover:text-brand-purple transition-colors">Admin Login</a>
+            <p class="text-sm text-gray-600">© 2026 BLACK LTZ. All rights reserved.</p>
         </div>
     </footer>
 
@@ -206,6 +216,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script type="module" src="/src/public-dynamic.ts"></script>
+    <script src="script.js"></script>
 </body>
 </html>
