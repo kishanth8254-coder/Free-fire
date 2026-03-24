@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK LTZ | App Pro Versions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple': '#a855f7',
+                        'brand-cyan': '#06b6d4',
+                        'brand-yellow': '#eab308',
+                        'brand-orange': '#f97316',
+                        'brand-green': '#22c55e',
+                        'brand-indigo': '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-black text-white font-['Inter']">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-black tracking-tighter neon-text-purple">BLACK LTZ</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Home</a>
+                        <a href="topup.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Top-Up</a>
+                        <a href="boost.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Guild Boost</a>
+                        <a href="panel.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Panel Store</a>
+                        <a href="tiktok.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">TikTok Offer</a>
+                        <a href="pro.html" class="px-3 py-2 rounded-md text-sm font-medium text-brand-purple transition-colors">Pro Apps</a>
+                        <a href="extra.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Other</a>
+                        <a href="webdev.html" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-brand-purple transition-colors">Web Dev</a>
+                        <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="px-4 py-2 rounded-full text-sm font-bold btn-glow-purple text-white">WhatsApp Order</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+            <div class="flex flex-col pt-10">
+                <a href="index.html" class="mobile-menu-link text-white">Home</a>
+                <a href="topup.html" class="mobile-menu-link text-white">Top-Up</a>
+                <a href="boost.html" class="mobile-menu-link text-white">Guild Boost</a>
+                <a href="panel.html" class="mobile-menu-link text-white">Panel Store</a>
+                <a href="tiktok.html" class="mobile-menu-link text-white">TikTok Offer</a>
+                <a href="pro.html" class="mobile-menu-link text-brand-purple">Pro Apps</a>
+                <a href="extra.html" class="mobile-menu-link text-white">Other</a>
+                <a href="webdev.html" class="mobile-menu-link text-white">Web Dev</a>
+                <div class="p-8">
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I want to order something!')" class="block w-full text-center py-4 rounded-full text-lg font-bold btn-glow-purple text-white">WhatsApp Order</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40 hero-gradient">
+        <div class="glow-circle w-96 h-96 bg-indigo-600/20 top-0 -left-20"></div>
+        <div class="glow-circle w-96 h-96 bg-purple-600/10 bottom-0 -right-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
+                <span class="block text-white">APP PRO</span>
+                <span class="block neon-text-purple">VERSIONS</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                Premium subscriptions for your favorite apps at the lowest prices.
+            </p>
+        </div>
+    </header>
+
+    <!-- Pro Apps Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CapCut Pro -->
+                <div class="glass-card p-8 rounded-[40px] border border-white/10 hover:border-purple-500/50 transition-all flex flex-col">
+                    <div class="w-20 h-20 bg-purple-600/20 rounded-3xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-video text-4xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">CapCut Pro</h3>
+                    <div class="space-y-4 mb-8 flex-grow">
+                        <div class="package-card p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-purple-600/20 cursor-pointer" data-package="CapCut Pro - 1 Month" data-price="399">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">1 Month</span>
+                                <span class="text-brand-yellow font-black">Rs. 399</span>
+                            </div>
+                        </div>
+                        <div class="package-card p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-purple-600/20 cursor-pointer" data-package="CapCut Pro - 3 Months" data-price="999">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">3 Months</span>
+                                <span class="text-brand-yellow font-black">Rs. 999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full py-4 rounded-2xl bg-purple-600 text-white font-black uppercase tracking-widest text-sm btn-glow-purple">Order Now</button>
+                </div>
+
+                <!-- YouTube Premium -->
+                <div class="glass-card p-8 rounded-[40px] border border-white/10 hover:border-red-500/50 transition-all flex flex-col">
+                    <div class="w-20 h-20 bg-red-600/20 rounded-3xl flex items-center justify-center mb-6">
+                        <i class="fa-brands fa-youtube text-4xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">YouTube Premium</h3>
+                    <div class="space-y-4 mb-8 flex-grow">
+                        <div class="package-card p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-red-600/20 cursor-pointer" data-package="YouTube Premium - 1 Month" data-price="925">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">1 Month</span>
+                                <span class="text-brand-yellow font-black">Rs. 925</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full py-4 rounded-2xl bg-red-600 text-white font-black uppercase tracking-widest text-sm hover:shadow-[0_0_20px_rgba(220,38,38,0.5)]">Order Now</button>
+                </div>
+
+                <!-- Canva Pro -->
+                <div class="glass-card p-8 rounded-[40px] border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col">
+                    <div class="w-20 h-20 bg-cyan-600/20 rounded-3xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-palette text-4xl text-cyan-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Canva Pro</h3>
+                    <div class="space-y-4 mb-8 flex-grow">
+                        <div class="package-card p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-cyan-600/20 cursor-pointer" data-package="Canva Pro - 1 Year" data-price="1200">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">1 Year</span>
+                                <span class="text-brand-yellow font-black">Rs. 1200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full py-4 rounded-2xl bg-cyan-600 text-white font-black uppercase tracking-widest text-sm btn-glow-cyan">Order Now</button>
+                </div>
+
+                <!-- Adobe Creative Cloud -->
+                <div class="glass-card p-8 rounded-[40px] border border-white/10 hover:border-orange-500/50 transition-all flex flex-col lg:col-span-3">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <div class="w-20 h-20 bg-orange-600/20 rounded-3xl flex items-center justify-center mb-6">
+                                <i class="fa-solid fa-cloud text-4xl text-orange-500"></i>
+                            </div>
+                            <h3 class="text-3xl font-black mb-4">Adobe Creative Cloud</h3>
+                            <p class="text-gray-400 mb-6">4 Month Subscription - Full Access to 20+ Premium Apps.</p>
+                            <div class="package-card p-6 rounded-2xl bg-white/5 border border-orange-500/50 hover:bg-orange-600/20 cursor-pointer mb-6" data-package="Adobe Creative Cloud - 4 Months" data-price="1100">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xl font-bold">4 Months</span>
+                                    <span class="text-3xl font-black text-brand-yellow">Rs. 1100</span>
+                                </div>
+                            </div>
+                            <button class="w-full py-4 rounded-2xl bg-orange-600 text-white font-black uppercase tracking-widest text-sm btn-glow-orange">Order Now</button>
+                        </div>
+                        <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="space-y-2">
+                                <h4 class="font-bold text-orange-400 uppercase tracking-widest text-xs">Includes</h4>
+                                <ul class="text-gray-400 space-y-1">
+                                    <li>• Photoshop, Illustrator, InDesign</li>
+                                    <li>• Premiere Pro, After Effects</li>
+                                    <li>• Lightroom, XD, Animate</li>
+                                    <li>• Acrobat Pro, Adobe Express</li>
+                                    <li>• 100 GB Cloud Storage</li>
+                                    <li>• 1000 Firefly Credits/Month</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="font-bold text-orange-400 uppercase tracking-widest text-xs">Features</h4>
+                                <ul class="text-gray-400 space-y-1">
+                                    <li>• Use on 2 Devices</li>
+                                    <li>• Private Account - Individual Use</li>
+                                    <li>• Email & Password Access</li>
+                                    <li>• Instant Delivery</li>
+                                    <li>• 30 Days Warranty</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content glass-card p-8 rounded-3xl neon-border-purple relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            <div class="text-center mb-8">
+                <h2 id="modal-title" class="text-2xl font-black mb-2 uppercase tracking-tight">ORDER FORM</h2>
+                <p class="text-gray-400 text-sm">Fill the details to complete your order via WhatsApp</p>
+            </div>
+
+            <form id="modal-order-form" class="space-y-4">
+                <input type="hidden" id="modal-package">
+                
+                <div id="extra-fields" class="space-y-4">
+                    <!-- Dynamic fields will be injected here -->
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Payment Method</label>
+                    <select id="modal-payment-method" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors appearance-none">
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Ez Cash">Ez Cash</option>
+                        <option value="M Cash">M Cash</option>
+                        <option value="Reload">Reload</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Extra Note (Optional)</label>
+                    <textarea id="modal-note" rows="2" placeholder="Anything else?" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl btn-glow-green text-lg font-black uppercase tracking-widest">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Order on WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-black mb-4 neon-text-purple">BLACK LTZ</h2>
+            <p class="text-gray-500 mb-6">100% Trusted Gaming Service Provider in Sri Lanka</p>
+            <p class="text-sm text-gray-600">© 2026 BLACK LTZ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="javascript:void(0)" onclick="openWhatsApp('Hi BLACK LTZ, I need App Pro Version details.')" class="floating-whatsapp w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
