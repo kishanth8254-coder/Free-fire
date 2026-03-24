@@ -107,13 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const note = document.getElementById('modal-note').value;
             const orderId = generateOrderId();
             
-            let message = `*╔══════════════════╗*\n`;
-            message += `*   🕹️  BLACK LTZ ORDER  🕹️   *\n`;
-            message += `*╚══════════════════╝*\n\n`;
-            message += `*🆔 Order ID :* ${orderId}\n`;
-            message += `*📦 Package  :* ${pkg}\n`;
-            message += `*💳 Payment  :* ${method}\n`;
-            message += `*──────────────────*\n`;
+            let message = `🌟 *BLACK LTZ PREMIUM STORE* 🌟\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━\n`;
+            message += `📦 *NEW ORDER RECEIVED*\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+            message += `🆔 *Order ID:* #${orderId}\n`;
+            message += `🎮 *Service:* ${pkg}\n`;
+            message += `💳 *Payment:* ${method}\n`;
+            message += `━━━━━━━━━━━━━━━━━━━━\n`;
+            message += `📝 *ORDER DETAILS:*\n`;
 
             const uidInput = document.getElementById('modal-uid');
             const playerNameInput = document.getElementById('modal-player-name');
@@ -123,18 +125,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const webDescInput = document.getElementById('modal-web-desc');
             const emailInput = document.getElementById('modal-email');
 
-            if (uidInput) message += `*👤 UID      :* ${uidInput.value}\n`;
-            if (playerNameInput) message += `*🏷️ Name     :* ${playerNameInput.value}\n`;
-            if (guildNameInput) message += `*🏰 Guild    :* ${guildNameInput.value}\n`;
-            if (platformInput) message += `*📱 Platform :* ${platformInput.value}\n`;
-            if (tiktokLinkInput) message += `*🔗 TikTok   :* ${tiktokLinkInput.value}\n`;
-            if (webDescInput) message += `*💻 Details  :* ${webDescInput.value}\n`;
-            if (emailInput) message += `*📧 Email    :* ${emailInput.value}\n`;
+            if (uidInput && uidInput.value) message += `👤 *Player UID:* ${uidInput.value}\n`;
+            if (playerNameInput && playerNameInput.value) message += `🏷️ *Player Name:* ${playerNameInput.value}\n`;
+            if (guildNameInput && guildNameInput.value) message += `🏰 *Guild Name:* ${guildNameInput.value}\n`;
+            if (platformInput && platformInput.value) message += `📱 *Platform:* ${platformInput.value}\n`;
+            if (tiktokLinkInput && tiktokLinkInput.value) message += `🔗 *Link/User:* ${tiktokLinkInput.value}\n`;
+            if (webDescInput && webDescInput.value) message += `💻 *Requirements:* ${webDescInput.value}\n`;
+            if (emailInput && emailInput.value) message += `📧 *Email:* ${emailInput.value}\n`;
             
-            if (note) message += `*📝 Note     :* ${note}\n`;
+            if (note && note.trim()) message += `\n💬 *Note:* ${note}\n`;
             
-            message += `*──────────────────*\n`;
-            message += `\n*🚀 Please process my order!*`;
+            message += `━━━━━━━━━━━━━━━━━━━━\n`;
+            message += `\n🚀 *Please process my order as soon as possible!*\n`;
+            message += `_Sent via BLACK LTZ Web Portal_`;
 
             openWhatsApp(message);
             closeModal();
